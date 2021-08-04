@@ -1,0 +1,149 @@
+@use "variables";
+main {
+  width: 100%;
+}
+
+#fylo,
+#progress-bar-container {
+  background-color: variables.$dark-blue;
+  max-width: 33.9285em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+
+#fylo {
+  margin-bottom: 15px;
+  padding: 2.85em 2.85em;
+  border-radius: 10px 100px 10px 10px;
+
+  #fylo-logo {
+    margin-bottom: 2.14em;
+    width: 9.642em;
+    height: 2.857em;
+  }
+}
+
+//-----------------------------------------------------------
+
+#buttons {
+  display: flex;
+  column-gap: 1.2em;
+
+  button {
+    background-color: variables.$very-dark-blue;
+    border-radius: 10px;
+    border: none;
+    width: 3.57rem;
+    height: 3.57rem;
+
+    img {
+      width: 1.714rem;
+      height: 1.428rem;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+
+#used {
+  color: variables.$grayish-blue;
+  margin-bottom: 1em;
+  span {
+    color: variables.$pale-blue;
+  }
+}
+
+//-----------------------------------------------------------
+
+#progress-bar-container {
+  padding: 2.14em 2.14em 3.57em 2.14em;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+
+  #progress-bar {
+    background-color: variables.$less-very-dark-blue;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    padding: 2px;
+    position: relative;
+
+    #progress {
+      width: 75%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      #dot {
+        background-color: #fff;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------
+
+#scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  #min,
+  #max {
+    display: inline-block;
+    font-size: 1em;
+    color: variables.$pale-blue;
+    font-weight: 700;
+  }
+}
+
+//-----------------------------------------------------------
+
+#cloud {
+  text-align: center;
+  background-color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  position: absolute;
+  max-width: 12.857em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -20%;
+  &::after {
+    content: "";
+    right: 0;
+    top: 100%;
+    position: absolute;
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+    visibility: hidden;
+  }
+  #gb-left {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    span {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #000;
+      margin-right: 0.3em;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$violet;
+  background-image: url("../images/bg-mobile.svg");
+  background-size: 100% 100%;
+  min-height: 100vh;
+  padding: v.$body-paddingY v.$body-paddingX;
+}
+
+//Poprawić logo sprawdzić cziconki dorobić social media sprawdzić jak ktoś inny zrobił

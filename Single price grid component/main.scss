@@ -1,0 +1,163 @@
+@use "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+@mixin padding {
+  padding: 2.5em 2em 2em 2em;
+}
+
+@mixin margin-bottom {
+  margin-bottom: 1.25em;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: variables.$light-gray;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#wrapper {
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 25px -3px gray;
+  overflow: hidden;
+
+  #top,
+  #bottom-left,
+  #bottom-right {
+    max-width: 30em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include padding;
+    @media (min-width: 50em) {
+      max-width: 40em;
+    }
+  }
+
+  #top {
+    background-color: white;
+    h1 {
+      color: variables.$cyan;
+      @include margin-bottom;
+    }
+    p:nth-of-type(1) {
+      color: variables.$bright-yellow;
+      margin-bottom: 1em;
+      font-weight: 700;
+    }
+    p:nth-of-type(2) {
+      color: variables.$grayish-blue;
+      line-height: 2;
+      @include margin-bottom;
+    }
+  }
+
+  #bottom-left {
+    background-color: variables.$cyan;
+    h2 {
+      color: white;
+      @include margin-bottom;
+    }
+    p:nth-of-type(1) {
+      color: variables.$light-gray;
+      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+    }
+    p:nth-of-type(1) span:nth-of-type(1) {
+      color: white;
+      font-size: 2.5rem;
+    }
+    p:nth-of-type(1) span:nth-of-type(2) {
+      margin-left: 10px;
+    }
+    p:nth-of-type(2) {
+      color: white;
+      margin-bottom: 2.4em;
+    }
+    button {
+      width: 100%;
+      max-width: 30em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: variables.$bright-yellow;
+      color: white;
+      padding: 1em 1em;
+      font-weight: 700;
+      font-size: 1em;
+      border: none;
+      box-shadow: 0px 0px 35px 5px variables.$bright-yellow;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: hsl(71, 83%, 54%);
+    }
+    button:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  #bottom-right {
+    background-color: hsl(179, 62%, 53%);
+    h3 {
+      color: white;
+      font-size: 1.5rem;
+      @include margin-bottom;
+    }
+    ul {
+      list-style-type: none;
+    }
+    ul li {
+      color: variables.$light-gray;
+      line-height: 1.5;
+    }
+  }
+
+  @media (min-width: 50em) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr;
+
+    #top {
+      grid-column: 1/-1;
+    }
+
+    #bottom-left {
+      grid-column: 1/2;
+    }
+
+    #bottom-right {
+      grid-column: 2/2;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}

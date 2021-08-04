@@ -1,0 +1,116 @@
+@use "variables";
+
+main {
+  display: grid;
+  row-gap: 25px;
+}
+
+main > div {
+  border-radius: 10px;
+  padding: 2em 2.2em;
+  max-width: 35em;
+  box-shadow: 0px 0px 20px -10px #000000;
+}
+
+.split {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.avatar {
+  border-radius: 50%;
+  // width: 33px;
+  // height: 33px;
+  width: 2.538em;
+  height: 2.538em;
+  margin-right: 1em;
+}
+
+.status {
+  font-size: 0.85rem;
+}
+
+.conclusion {
+  margin-bottom: 1em;
+}
+
+#daniel,
+#jonathan,
+#patrick {
+  .name,
+  .status {
+    color: variables.$white;
+  }
+
+  .status {
+    opacity: 0.5;
+  }
+
+  .conclusion,
+  .review {
+    color: variables.$white;
+  }
+
+  .review {
+    opacity: 0.5;
+  }
+}
+
+#jeanette,
+#kira {
+  .name,
+  .status {
+    color: variables.$very-dark-grayish-blue;
+  }
+
+  .status {
+    opacity: 0.5;
+  }
+
+  .conclusion,
+  .review {
+    color: variables.$very-dark-grayish-blue;
+  }
+
+  .review {
+    opacity: 0.7;
+  }
+}
+
+#daniel,
+#patrick {
+  img {
+    border: 2px solid variables.$light-violet;
+  }
+}
+
+#jeanette,
+#kira,
+#jonathan {
+  img {
+    border: 2px solid variables.$white;
+  }
+}
+
+#daniel {
+  background-color: variables.$moderate-violet;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 90% top;
+}
+
+#jonathan {
+  background-color: variables.$very-dark-grayish-blue;
+}
+
+#jeanette {
+  background-color: variables.$white;
+}
+
+#patrick {
+  background-color: variables.$very-dark-blackish-blue;
+}
+
+#kira {
+  background-color: variables.$white;
+}

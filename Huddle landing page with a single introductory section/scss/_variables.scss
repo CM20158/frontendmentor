@@ -1,0 +1,39 @@
+//688px
+@mixin small {
+  @media (min-width: 43em) {
+    @content;
+  }
+}
+//992px
+@mixin medium {
+  @media (min-width: 62em) {
+    @content;
+  }
+}
+//1312px
+@mixin big {
+  @media (min-width: 82em) {
+    @content;
+  }
+}
+
+@mixin button($font-size, $paddingY, $paddinX) {
+  font-size: $font-size;
+  padding: $paddingY $paddinX;
+}
+
+$body-paddingY: 5vh;
+$body-paddingX: 10.5vw;
+
+$h1-fontSmall: 2.8rem;
+$h1-fontMedium: 1.8rem;
+$h1-fontBig: 2.3rem;
+
+$h2-fontSmall: 1.6rem;
+$h2-fontMedium: 1rem;
+$h2-fontBig: 1.05rem;
+
+$icons-fontSmall: 1.5rem;
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);

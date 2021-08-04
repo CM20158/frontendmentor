@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 0.875em;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #0c122c;
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: 20px;
+  padding-left: 20px;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main {
+  width: 100%;
+}
+
+#fylo,
+#progress-bar-container {
+  background-color: #1d2c67;
+  max-width: 33.9285em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+
+#fylo {
+  margin-bottom: 15px;
+  padding: 2.85em 2.85em;
+  border-radius: 10px 100px 10px 10px;
+}
+#fylo #fylo-logo {
+  margin-bottom: 2.14em;
+  width: 9.642em;
+  height: 2.857em;
+}
+
+#buttons {
+  display: flex;
+  column-gap: 1.2em;
+}
+#buttons button {
+  background-color: #0c122c;
+  border-radius: 10px;
+  border: none;
+  width: 3.57rem;
+  height: 3.57rem;
+}
+#buttons button img {
+  width: 1.714rem;
+  height: 1.428rem;
+}
+
+#used {
+  color: #bbbcc4;
+  margin-bottom: 1em;
+}
+#used span {
+  color: #dddbff;
+}
+
+#progress-bar-container {
+  padding: 2.14em 2.14em 3.57em 2.14em;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+#progress-bar-container #progress-bar {
+  background-color: #131c44;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  padding: 2px;
+  position: relative;
+}
+#progress-bar-container #progress-bar #progress {
+  width: 75%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#progress-bar-container #progress-bar #progress #dot {
+  background-color: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
+#scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#scale #min,
+#scale #max {
+  display: inline-block;
+  font-size: 1em;
+  color: #dddbff;
+  font-weight: 700;
+}
+
+#cloud {
+  text-align: center;
+  background-color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  position: absolute;
+  max-width: 12.857em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -20%;
+}
+#cloud::after {
+  content: "";
+  right: 0;
+  top: 100%;
+  position: absolute;
+  border-top: 20px solid #fff;
+  border-left: 20px solid transparent;
+  visibility: hidden;
+}
+#cloud #gb-left {
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#cloud #gb-left span {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #000;
+  margin-right: 0.3em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 62em) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  #fylo,
+#progress-bar-container {
+    margin: 0;
+  }
+
+  #fylo {
+    max-width: 26.7857em;
+    margin-right: 30px;
+  }
+
+  #progress-bar-container {
+    max-width: 38.5714em;
+    padding: 2.9em 2.5em;
+    align-self: flex-end;
+    text-align: left;
+  }
+
+  #cloud {
+    margin: 0;
+    left: auto;
+    bottom: auto;
+    top: -30%;
+    border-radius: 10px 10px 0 10px;
+    margin-right: 2.5em;
+  }
+  #cloud:after {
+    visibility: visible;
+  }
+}/*# sourceMappingURL=style.css.map */

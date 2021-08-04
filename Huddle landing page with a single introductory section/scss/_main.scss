@@ -1,0 +1,57 @@
+@use "variables" as v;
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#img-part {
+  margin-bottom: 5vw;
+}
+
+#main-illustration {
+  width: 100%;
+  height: 100%;
+}
+
+#text-part {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1vh;
+  color: hsl(0, 0, 100%);
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: hsl(0, 0, 90%);
+  margin-bottom: 4vh;
+}
+
+#register-button {
+  font-size: 1rem;
+  padding: 0.3em 1.8em;
+  color: v.$violet;
+  margin-bottom: 7vh;
+  border-radius: 150px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 20px -10px #000000;
+  border: none;
+
+  &:hover {
+    background-color: v.$soft-magenta;
+    transition: 0.5s;
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
+}

@@ -1,0 +1,87 @@
+@use "variables" as v;
+
+@include v.small {
+  h1 {
+    font-size: v.$h1-fontSmall;
+  }
+
+  h2 {
+    font-size: v.$h2-fontSmall;
+  }
+
+  #register-button {
+    @include v.button(1rem, 0.8em, 7em);
+  }
+
+  ion-icon {
+    font-size: v.$icons-fontSmall;
+  }
+}
+
+@include v.medium {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+    padding: 0;
+  }
+
+  #wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 1280px;
+  }
+
+  header {
+    margin-bottom: 90px;
+  }
+
+  main {
+    flex-direction: row;
+    max-width: 1280px;
+  }
+
+  #img-part {
+    width: 55%;
+    max-height: 490px;
+    margin-right: 5vw;
+    margin-bottom: 0;
+  }
+
+  #text-part {
+    width: 45%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: v.$h1-fontMedium;
+  }
+
+  h2 {
+    font-size: v.$h2-fontMedium;
+  }
+
+  #register-button {
+    @include v.button(1rem, 0.8em, 4em);
+    margin-bottom: 0;
+  }
+
+  footer {
+    text-align: right;
+  }
+}
+
+@include v.big {
+  h1 {
+    font-size: v.$h1-fontBig;
+    margin-top: 25px;
+  }
+
+  h2 {
+    font-size: v.$h2-fontBig;
+  }
+}

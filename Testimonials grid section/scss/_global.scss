@@ -1,0 +1,23 @@
+@use "variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 0.8125rem;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: variables.$light-grayish-blue;
+  padding: 70px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}

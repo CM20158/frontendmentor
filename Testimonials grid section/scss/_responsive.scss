@@ -1,0 +1,37 @@
+@media (min-width: 52em) {
+  body {
+    justify-content: center;
+  }
+
+  main {
+    max-width: 110em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+  }
+
+  main > div {
+    max-width: none;
+  }
+
+  #daniel {
+    grid-column: 1 / 3;
+  }
+
+  #jonathan {
+    grid-column: 3 / 4;
+  }
+
+  #kira {
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
+  }
+
+  #jeanette {
+    grid-column: 1 / 1;
+  }
+
+  #patrick {
+    grid-column: 2 / 4;
+  }
+}
