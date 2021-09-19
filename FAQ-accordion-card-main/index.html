@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+
+<body>
+  <main>
+    <img class="images__box-desktop" src="./images/illustration-box-desktop.svg" alt="box image">
+    <section class="images">
+      <img class="images__woman-mobile" src="./images/illustration-woman-online-mobile.svg" alt="woman mobile image">
+      <img class="images__woman-desktop" src="./images/illustration-woman-online-desktop.svg" alt="woman desktop image">
+    </section>
+    <section class="faq">
+      <h1 class="faq__header">FAQ</h1>
+      <div class="faq__accordion">
+        <p class="question">How many team members can I invite?</p>
+        <p class="anserw">You can invite up to 2 additional users on the Free plan. There is no limit on team members
+          for the Premium plan.</p>
+      </div>
+      <div class="faq__accordion">
+        <p class="question">What is the maximum file upload size?</p>
+        <p class="anserw">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
+      <div class="faq__accordion">
+        <p class="question">How do I reset my password?</p>
+        <p class="anserw">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</p>
+      </div>
+      <div class="faq__accordion">
+        <p class="question">Can I cancel my subscription?</p>
+        <p class="anserw">Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </div>
+      <div class="faq__accordion">
+        <p class="question">Do you provide additional support?</p>
+        <p class="anserw">Chat and email support is available 24/7. Phone lines are open during normal business
+          hours.</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const faq = document.querySelector('.faq')
+    faq.addEventListener('click', event => {
+      if (event.target.parentNode.classList.contains('faq__accordion')) {
+        event.target.parentNode.classList.toggle('active')
+        faq.querySelectorAll('.faq__accordion').forEach(accordion => {
+          if (accordion !== event.target.parentNode) {
+            accordion.classList.remove('active')
+          }
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>
